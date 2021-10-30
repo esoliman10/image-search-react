@@ -1,0 +1,31 @@
+import React, { useState } from 'react';
+
+function Test() {
+  const [query, setQuery] = useState("");
+
+  
+ const handleformSubmit = () =>{
+ alert(query);
+ }
+
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <input 
+              type="text" 
+              value={query} 
+              onChange={()=>{
+                setQuery(e.target.value);
+              }}
+            />
+
+
+      <button onClick={() => {
+        handleformSubmit();
+      }}>
+        Click me
+      </button>
+    </div>
+  );
+}

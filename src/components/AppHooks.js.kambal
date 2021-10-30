@@ -1,0 +1,38 @@
+import React, { useState, useEffect } from "react";
+import SearchBar from "./SearchBar";
+
+const App = () => {
+
+  const [query, setQuery] = useState("");
+
+  
+  const handleformSubmit = () =>{
+  alert(query);
+  }
+ 
+ useEffect(() => {
+   console.log("dfdf")
+ }, [query])
+
+    return (
+      <div>
+      
+      <input 
+              type="text" 
+              value={query} 
+              onChange={(e)=>{
+                setQuery(e.target.value);
+              }}
+            />
+
+
+      <button onClick={() => {
+        handleformSubmit();
+      }}>
+        Click me
+      </button>
+    </div>
+    )
+};
+
+export default App;
